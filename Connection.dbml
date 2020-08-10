@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Db_Asnad97_Medu" Class="ConnectionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-LJTEU1J\sqlexpress;Initial Catalog=Db_Asnad97_Medu;Integrated Security=True" SettingsObjectName="AmvalSystem.Properties.Settings" SettingsPropertyName="Db_Asnad97_MeduConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_Kala" Member="tbl_Kalas">
+    <Type Name="tbl_Kala">
+      <Column Name="KalaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KalaName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="KalaVahed" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCity" Member="tblCities">
+    <Type Name="tblCity">
+      <Column Name="CityID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProvinceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUser" Member="tblUsers">
+    <Type Name="tblUser">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Factor" Member="tbl_Factors">
+    <Type Name="tbl_Factor">
+      <Column Name="FactorID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SannadID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdminID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sh1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh3" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No3" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh4" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No4" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh5" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No5" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh6" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No6" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh7" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No7" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh8" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No8" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh9" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No9" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh10" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No10" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh11" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No11" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh12" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No12" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh13" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No13" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh14" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No14" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sh15" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="No15" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GhabzID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="tblAdmin_tbl_Factor" Member="tblAdmin" ThisKey="AdminID" OtherKey="AdminID" Type="tblAdmin" IsForeignKey="true" />
+      <Association Name="tblCreator_tbl_Factor" Member="tblCreator" ThisKey="CreatorID" OtherKey="CreatorID" Type="tblCreator" IsForeignKey="true" />
+      <Association Name="tblSannad_tbl_Factor" Member="tblSannad" ThisKey="SannadID" OtherKey="SannadID" Type="tblSannad" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAdmin" Member="tblAdmins">
+    <Type Name="tblAdmin">
+      <Column Name="AdminID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdminName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tblAdmin_tbl_Factor" Member="tbl_Factors" ThisKey="AdminID" OtherKey="AdminID" Type="tbl_Factor" />
+      <Association Name="tblAdmin_tblHavaleh" Member="tblHavalehs" ThisKey="AdminID" OtherKey="AdminID" Type="tblHavaleh" />
+      <Association Name="tblAdmin_tblRequest" Member="tblRequests" ThisKey="AdminID" OtherKey="AdminID" Type="tblRequest" />
+      <Association Name="tblAdmin_tblSannad" Member="tblSannads" ThisKey="AdminID" OtherKey="AdminID" Type="tblSannad" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCheck" Member="tblChecks">
+    <Type Name="tblCheck">
+      <Column Name="CheckID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MonthID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YearID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SannadCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblMonth_tblCheck" Member="tblMonth" ThisKey="MonthID" OtherKey="MonthID" Type="tblMonth" IsForeignKey="true" />
+      <Association Name="tblYear_tblCheck" Member="tblYear" ThisKey="YearID" OtherKey="YearID" Type="tblYear" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCreator" Member="tblCreators">
+    <Type Name="tblCreator">
+      <Column Name="CreatorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CreatorName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tblCreator_tbl_Factor" Member="tbl_Factors" ThisKey="CreatorID" OtherKey="CreatorID" Type="tbl_Factor" />
+      <Association Name="tblCreator_tblHavaleh" Member="tblHavalehs" ThisKey="CreatorID" OtherKey="CreatorID" Type="tblHavaleh" />
+      <Association Name="tblCreator_tblKharid" Member="tblKharids" ThisKey="CreatorID" OtherKey="CreatorID" Type="tblKharid" />
+      <Association Name="tblCreator_tblSannad" Member="tblSannads" ThisKey="CreatorID" OtherKey="CreatorID" Type="tblSannad" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblEtebar" Member="tblEtebars">
+    <Type Name="tblEtebar">
+      <Column Name="EtebarID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Fasl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodeHazineh" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sharh" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblEtebar_tblSannad" Member="tblSannads" ThisKey="EtebarID" OtherKey="EtebarID" Type="tblSannad" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblFasl" Member="tblFasls">
+    <Type Name="tblFasl">
+      <Column Name="FaslID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Fasl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tblFasl_tblKharid" Member="tblKharids" ThisKey="FaslID" OtherKey="FaslID" Type="tblKharid" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblHavaleh" Member="tblHavalehs">
+    <Type Name="tblHavaleh">
+      <Column Name="HavalehID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SharhKala" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CountKala" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VahedKala" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TahvilDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VahedTahvil" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MonthID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YearID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdminID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblAdmin_tblHavaleh" Member="tblAdmin" ThisKey="AdminID" OtherKey="AdminID" Type="tblAdmin" IsForeignKey="true" />
+      <Association Name="tblCreator_tblHavaleh" Member="tblCreator" ThisKey="CreatorID" OtherKey="CreatorID" Type="tblCreator" IsForeignKey="true" />
+      <Association Name="tblMonth_tblHavaleh" Member="tblMonth" ThisKey="MonthID" OtherKey="MonthID" Type="tblMonth" IsForeignKey="true" />
+      <Association Name="tblYear_tblHavaleh" Member="tblYear" ThisKey="YearID" OtherKey="YearID" Type="tblYear" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblLetter" Member="tblLetters">
+    <Type Name="tblLetter">
+      <Column Name="LetterID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LetterSubject" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LetterText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblKharid" Member="tblKharids">
+    <Type Name="tblKharid">
+      <Column Name="KharidID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YearID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FaslID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SellerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SellerCode" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SellerCity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SellerAddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SellerPhone" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SellerPostCode" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="momo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Malliat6" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Malliat3" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FinalPrice" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MonthID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SannadID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblCreator_tblKharid" Member="tblCreator" ThisKey="CreatorID" OtherKey="CreatorID" Type="tblCreator" IsForeignKey="true" />
+      <Association Name="tblFasl_tblKharid" Member="tblFasl" ThisKey="FaslID" OtherKey="FaslID" Type="tblFasl" IsForeignKey="true" />
+      <Association Name="tblMonth_tblKharid" Member="tblMonth" ThisKey="MonthID" OtherKey="MonthID" Type="tblMonth" IsForeignKey="true" />
+      <Association Name="tblSannad_tblKharid" Member="tblSannad" ThisKey="SannadID" OtherKey="SannadID" Type="tblSannad" IsForeignKey="true" />
+      <Association Name="tblYear_tblKharid" Member="tblYear" ThisKey="YearID" OtherKey="YearID" Type="tblYear" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblRequest" Member="tblRequests">
+    <Type Name="tblRequest">
+      <Column Name="RequestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReuestName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RequestDate" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Request" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AdminID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblAdmin_tblRequest" Member="tblAdmin" ThisKey="AdminID" OtherKey="AdminID" Type="tblAdmin" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMonth" Member="tblMonths">
+    <Type Name="tblMonth">
+      <Column Name="MonthID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MonthName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="tblMonth_tblCheck" Member="tblChecks" ThisKey="MonthID" OtherKey="MonthID" Type="tblCheck" />
+      <Association Name="tblMonth_tblHavaleh" Member="tblHavalehs" ThisKey="MonthID" OtherKey="MonthID" Type="tblHavaleh" />
+      <Association Name="tblMonth_tblKharid" Member="tblKharids" ThisKey="MonthID" OtherKey="MonthID" Type="tblKharid" />
+      <Association Name="tblMonth_tblSannad" Member="tblSannads" ThisKey="MonthID" OtherKey="MonthID" Type="tblSannad" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSannad" Member="tblSannads">
+    <Type Name="tblSannad">
+      <Column Name="SannadID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MonthID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YearID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Timesabt" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Datesabt" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Maliat3" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Maliat6" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="finalPrice" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EtebarID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="momo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdminID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="upone" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="kharidinsert" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tblSannad_tbl_Factor" Member="tbl_Factors" ThisKey="SannadID" OtherKey="SannadID" Type="tbl_Factor" />
+      <Association Name="tblSannad_tblKharid" Member="tblKharids" ThisKey="SannadID" OtherKey="SannadID" Type="tblKharid" />
+      <Association Name="tblAdmin_tblSannad" Member="tblAdmin" ThisKey="AdminID" OtherKey="AdminID" Type="tblAdmin" IsForeignKey="true" />
+      <Association Name="tblCreator_tblSannad" Member="tblCreator" ThisKey="CreatorID" OtherKey="CreatorID" Type="tblCreator" IsForeignKey="true" />
+      <Association Name="tblEtebar_tblSannad" Member="tblEtebar" ThisKey="EtebarID" OtherKey="EtebarID" Type="tblEtebar" IsForeignKey="true" />
+      <Association Name="tblMonth_tblSannad" Member="tblMonth" ThisKey="MonthID" OtherKey="MonthID" Type="tblMonth" IsForeignKey="true" />
+      <Association Name="tblYear_tblSannad" Member="tblYear" ThisKey="YearID" OtherKey="YearID" Type="tblYear" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSeller" Member="tblSellers">
+    <Type Name="tblSeller">
+      <Column Name="SellerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SellerCode" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SellerName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SellerCity" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SellerAddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SellerPhone" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SellerPostCode" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblYear" Member="tblYears">
+    <Type Name="tblYear">
+      <Column Name="YearID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YearName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="tblYear_tblCheck" Member="tblChecks" ThisKey="YearID" OtherKey="YearID" Type="tblCheck" />
+      <Association Name="tblYear_tblHavaleh" Member="tblHavalehs" ThisKey="YearID" OtherKey="YearID" Type="tblHavaleh" />
+      <Association Name="tblYear_tblKharid" Member="tblKharids" ThisKey="YearID" OtherKey="YearID" Type="tblKharid" />
+      <Association Name="tblYear_tblSannad" Member="tblSannads" ThisKey="YearID" OtherKey="YearID" Type="tblSannad" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View2" Member="View2s">
+    <Type Name="View2">
+      <Column Name="CheckID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MonthID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YearID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SannadCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MonthName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="YearName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view1" Member="view1s">
+    <Type Name="view1">
+      <Column Name="MonthName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="YearName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Fasl" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodeHazineh" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Maliat3" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Maliat6" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="finalPrice" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="momo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MonthID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YearID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdminID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AdminName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SannadID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View4" Member="View4s">
+    <Type Name="View4">
+      <Column Name="CreatorName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HavalehID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SharhKala" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CountKala" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VahedKala" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TahvilDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VahedTahvil" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MonthID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YearID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdminID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MonthName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="YearName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View3" Member="View3s">
+    <Type Name="View3">
+      <Column Name="CreatorName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fasl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KharidID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YearID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FaslID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SellerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SellerCode" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SellerCity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SellerAddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SellerPhone" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SellerPostCode" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="momo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Malliat6" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Malliat3" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FinalPrice" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreatorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MonthID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YearName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="MonthName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
